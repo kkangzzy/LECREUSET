@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+          <meta charset="uxf-8">
+          <title>LE CRUESET</title>
+          <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto" rel="stylesheet">
+<!--          <link rel="stylesheet" type="text/css" href="style.css">-->
+          <script src=".jquery-2.1.3.min.js"></script>
+          <script src=".jquery.parallax-scroll.js"></script>
+          <style>
+          
+* {
+    margin: 0; 
+    padding: 0;       
+}
+
+body{
+    background-color: white;
+    color: rgba(10,10,10,20);
+    font-size:100%;
+}
+p{
+    font-size:15pt;
+    line-height: 30px;        
+}
+
+h1{
+          padding: 0 0 15px 0;
+          font-weight: bolder;
+}
+
+img{
+    width:100%;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+ul{
+    position: relative;
+    float: right;
+    padding: 30px 30px;
+}
+
+li{
+    float: left;
+    list-style: none;
+    padding: 10px 30px;
+
+}
+
+ul a, a:visited {
+    text-decoration: none;
+    color: black; 
+}
+
+ul a:hover { color:darkred; }
+
+#logo-img {
+    float:left;
+    width: 300px;
+    height: 60px;
+    padding : 30px 20px 20px 20px;
+    margin: 0 10px 10px 0;
+
+}
+
+
+header {
+    height: 1400px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+}
+
+
+#background img{ 
+          position: relative;
+          transform: scale(4,4);
+          z-index: 10;
+          opacity: 100;
+}
+
+
+#indicator {
+          position: fixed;
+          top:1000px;
+          left: 49%;
+          z-index: 100;
+          margin: 0, auto;
+          width:70px;
+          height: 35px;       
+}
+
+#openpot{
+          width: 100%;
+          margin: 0 auto;
+}
+
+.box{
+          width: 100%;
+          margin: 0 auto;
+          position: relative;
+}
+
+#rotation1, #rotation2, #rotation3, #rotation4, #rotation5,#rotation6,#rotation7,#rotation8,#rotation9,#rotation10{
+          position: absolute;
+          top:140px;
+          transform: scale(0.9,0.9);
+          z-index: 5;
+}
+
+
+.rotation{
+          position: absolute;
+          top:0;
+          left: 0;
+}
+
+
+.title{
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;  
+    z-index: 200;
+    top:1200px;
+}
+
+.title p{
+          text-align: center;
+          position: absolute;
+          top:970px;
+          left:0;
+          font-size: 28px;
+          width: 100%;
+}
+#content_pot{
+          width: 100%;
+          position:absolute;
+          margin: 0 auto;
+          top:1410px;
+          height: 1200px;
+          float: left;
+          z-index:5;         
+}
+
+
+#content1{
+          width: 20%;
+          position:absolute;
+          left: 15%;
+          top: 500px;
+}
+#content2{
+          position: absolute;
+          width: 20%;
+          left: 72%;
+          top: 500px;
+}
+#content3{
+          position: absolute;
+          width: 20%;
+          top: 800px;
+          left:72%;
+}
+
+#pot_color{
+          width: 100%;
+          margin: 0 auto;
+          position: relative;
+          z-index: 200;
+}
+
+#color1{
+          position: absolute;
+          top:1300px;
+          z-index: 80;
+          width: 100%          
+}
+
+#pot{
+          position: absolute;
+          top:2300px;
+          z-index: 80;
+          width: 100%          
+}
+
+#stoneware_background{
+          position: absolute;  
+          top:2000px;
+          z-index: 1;
+          width: 100%;
+}
+
+#stone_title h1{
+          text-align: center;
+          top:2270px;
+          position: absolute;
+          left: -1%;
+          width: 100%;
+          z-index: 200;
+}
+
+#content_stoneware{
+          width: 100%;
+          position:absolute;
+          margin: 0 auto;
+          top:3000px;
+          height: 1200px;
+          float: left;
+          z-index:5;
+          
+}
+
+#content4{
+          width: 20%;
+          position:absolute;
+          left: 15%;
+          top: 500px;
+}
+#content5{
+          position: absolute;
+          width: 20%;
+          left: 15%;
+          top: 680px;
+}
+#content6{
+          position: absolute;
+          width: 20%;
+          top: 860px;
+          left:15%;
+}
+
+
+#front_layer{
+          position: absolute;
+          width:100%;
+          top:3300px;
+          z-index: 200;
+}
+
+#dishes{
+          position: absolute;
+          width:100%;
+          top:3000px;
+          z-index:100;
+}
+
+#cup{
+          position: absolute;
+          width: 100%;
+          top:3000px;
+          z-index: 220;
+          left:-200px;        
+}
+
+#dish_color{
+          
+          width: 100%;
+          margin: 0 auto;
+          position: absolute;
+          top:6000px;
+          z-index: 200;
+          
+}
+
+#wedding_title{
+          position:absolute;
+          width: 100%;
+          top:3000px;
+          z-index: 210;
+}
+
+#weddingset p{
+          text-align: center;
+}
+
+#wedding_text{
+          line-height: 35px;
+          position: absolute;
+          top:900px;
+          width: 100%;
+          z-index:200;
+}
+
+#wedding_text h1{
+          text-align: center;
+          top:-280px;
+          position: absolute;
+          margin: 0 auto;
+          width: 100%;
+}
+
+#coffee_background{
+          position: absolute;
+          top:4600px;
+          width: 100%;
+          z-index: 210;
+}
+
+#coffee_title h1{
+          text-align: center;
+          top:4820px;
+          position: absolute;
+          left: -1%;
+          width: 100%;
+          z-index: 300;
+}
+
+
+#content_coffee{
+          width: 100%;
+          position:absolute;
+          margin: 0 auto;
+          top:4620px;
+          z-index:220;
+          height: 1200px;
+          
+}
+
+#content7{
+          width: 20%;
+          position:absolute;
+          left: 15%;
+          top: 1500px;
+}
+#content8{
+          position: absolute;
+          width: 20%;
+          left: 15%;
+          top: 1680px;
+}
+
+#back_layer{
+          width: 100%;
+          position: relative;
+          top:5800px;
+          z-index:200;
+}
+
+#tea_dishes{
+          position: absolute;
+          width:100%;
+          top:5600px;
+          z-index:205;
+          left:-100px;
+}
+
+#bluetea{
+          position: absolute;
+          width: 100%;
+          top:5600px;
+          z-index: 220;
+          left:10px;
+}
+
+#tea_title{
+          position:absolute;
+          width: 100%;
+          top:5950px;
+          z-index: 240;
+}
+
+#teaset_text p{
+          text-align: center;
+}
+
+#teaset_text{
+          line-height: 35px;
+          position: absolute;
+          top:700px;
+          width: 100%;
+          z-index:200;
+          left: -1%;
+}
+
+#teaset_text h1{
+          text-align: center;
+          top:-230px;
+          position: absolute;
+          margin: 0 auto;
+          width: 100%;
+          left: -1%;
+}
+
+#tea_color{
+          width: 100%;
+          position: absolute;
+          top:6100px;
+          z-index: 220;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+          <nav>
+                    <div id="logo-img">
+                              <a href="index.html"><img src="logo.png"></a>
+                    </div>
+
+                    <ul>
+                              <li><a href="#background">COOKINGWARE</a></li>
+                              <li><a href="#stoneware_background">DINNERWARE</a></li>
+                              <li><a href="#coffee_background">SERVEWARE</a></li>
+                    </ul>
+          </nav>
+
+          <header>
+                    <div id="background">
+                              <img src="header_2.png">
+                             
+                    </div>
+                    <div id=indicator>
+                              <img src="scroll.png" data-parallax='{"y":2000, "from-scroll":170,"distance":100 }'></div>
+                    <script type="text/javascript">
+                              window.onload = function() {
+                                        $(document).on('scroll', function() {
+                                                  if ($(document).scrollTop() >= 300) {
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '100');
+                                                            $('#rotation10 img').css('opacity', '100');
+                                                            $('.title img').css('opacity', '0')
+                                                            $('.title p').css('opacity', '0')
+                                                  } else if ($(document).scrollTop() >= 260) {
+                                                            $('#background img').css('opacity', '0');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '100');
+                                                            $('#rotation10 img').css('opacity', '100');
+                                                            $('.title img').css('opacity', '100')
+                                                            $('.title p').css('opacity', '100')
+
+                                                  } else if ($(document).scrollTop() >= 250) {
+                                                            $('#background img').css('opacity', '0');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '100');
+                                                            $('#rotation10 img').css('opacity', '100');
+                                                  } else if ($(document).scrollTop() >= 240) {
+                                                            $('#background img').css('opacity', '0');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '100');
+                                                            $('#rotation9 img').css('opacity', '0');
+                                                            $('#rotation10 img').css('opacity', '0');
+                                                  } else if ($(document).scrollTop() >= 230) {
+                                                            $('#background img').css('opacity', '0');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '100');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '0');
+                                                            $('#rotation10 img').css('opacity', '0');
+                                                  } else if ($(document).scrollTop() >= 220) {
+                                                            $('#background img').css('opacity', '0');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '100');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '0');
+                                                            $('#rotation10 img').css('opacity', '0');
+                                                  } else if ($(document).scrollTop() >= 210) {
+                                                            $('#background img').css('opacity', '0');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '100');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '0');
+                                                            $('#rotation10 img').css('opacity', '0');
+                                                  } else if ($(document).scrollTop() >= 200) {
+                                                            $('#background img').css('opacity', '0');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '100');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '0');
+                                                            $('#rotation10 img').css('opacity', '0');
+                                                  } else if ($(document).scrollTop() >= 190) {
+                                                            $('#background img').css('opacity', '0');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '100');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '0');
+                                                            $('#rotation10 img').css('opacity', '0');
+                                                  } else if ($(document).scrollTop() >= 180) {
+                                                            $('#background img').css('opacity', '0');
+                                                            $('#rotation1 img').css('opacity', '100');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '0');
+                                                            $('#rotation10 img').css('opacity', '0');
+                                                  } else if ($(document).scrollTop() >= 170) {
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '0');
+                                                            $('#rotation10 img').css('opacity', '0');
+
+                                                  } else if ($(document).scrollTop() >= 160) {
+                                                            $('#background img').css('transform', 'scale(0.9,0.9)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 155) {
+                                                            $('#background img').css('transform', 'scale(1.1,1.1)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 150) {
+                                                            $('#background img').css('transform', 'scale(1.2,1.2)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 145) {
+                                                            $('#background img').css('transform', 'scale(1.3,1.3)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 140) {
+                                                            $('#background img').css('transform', 'scale(1.4,1.4)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 135) {
+                                                            $('#background img').css('transform', 'scale(1.5,1.5)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 130) {
+                                                            $('#background img').css('transform', 'scale(1.6,1.6)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 125) {
+                                                            $('#background img').css('transform', 'scale(1.7,1.7)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 120) {
+                                                            $('#background img').css('transform', 'scale(1.8,1.8)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 115) {
+                                                            $('#background img').css('transform', 'scale(1.9,1.9)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 110) {
+                                                            $('#background img').css('transform', 'scale(2,2)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 105) {
+                                                            $('#background img').css('transform', 'scale(2.1,2.1)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '200px');
+                                                  } else if ($(document).scrollTop() >= 100) {
+                                                            $('#background img').css('transform', 'scale(2.2,2.2)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '190px');
+                                                  } else if ($(document).scrollTop() >= 95) {
+                                                            $('#background img').css('transform', 'scale(2.3,2.3)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '180px');
+                                                  } else if ($(document).scrollTop() >= 90) {
+                                                            $('#background img').css('transform', 'scale(2.4,2.4)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '170px');
+                                                  } else if ($(document).scrollTop() >= 85) {
+                                                            $('#background img').css('transform', 'scale(2.5,2.5)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '160px');
+                                                  } else if ($(document).scrollTop() >= 80) {
+                                                            $('#background img').css('transform', 'scale(2.6,2.6)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '150px');
+                                                  } else if ($(document).scrollTop() >= 75) {
+                                                            $('#background img').css('transform', 'scale(2.7,2.7)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '140px');
+                                                  } else if ($(document).scrollTop() >= 70) {
+                                                            $('#background img').css('transform', 'scale(2.7,2.7)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '130px');
+                                                  } else if ($(document).scrollTop() >= 65) {
+                                                            $('#background img').css('transform', 'scale(2.8,2.8)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '120px');
+                                                  } else if ($(document).scrollTop() >= 60) {
+                                                            $('#background img').css('transform', 'scale(2.9,2.9)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '110px');
+                                                  } else if ($(document).scrollTop() >= 55) {
+                                                            $('#background img').css('transform', 'scale(3,3)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '100px');
+                                                  } else if ($(document).scrollTop() >= 50) {
+                                                            $('#background img').css('transform', 'scale(3.1,3.1)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '90px');
+
+                                                  } else if ($(document).scrollTop() >= 45) {
+                                                            $('#background img').css('transform', 'scale(3.2,3.2)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '80px');
+                                                  } else if ($(document).scrollTop() >= 40) {
+                                                            $('#background img').css('transform', 'scale(3.3,3.3)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '70px');
+                                                  } else if ($(document).scrollTop() >= 35) {
+                                                            $('#background img').css('transform', 'scale(3.4,3.4)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '60px');
+                                                  } else if ($(document).scrollTop() >= 30) {
+                                                            $('#background img').css('transform', 'scale(3.5,3.5)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '50px');
+                                                  } else if ($(document).scrollTop() >= 25) {
+                                                            $('#background img').css('transform', 'scale(3.6,3.6)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '40px');
+                                                  } else if ($(document).scrollTop() >= 20) {
+                                                            $('#background img').css('transform', 'scale(3.7,3.7)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '30px');
+
+                                                  } else if ($(document).scrollTop() >= 15) {
+                                                            $('#background img').css('transform', 'scale(3.8,3.8)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '20px');
+                                                  } else if ($(document).scrollTop() >= 10) {
+                                                            $('#background img').css('transform', 'scale(3.9,3.9)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '10px');
+                                                  } else {
+                                                            $('#background img').css('transform', 'scale(4,4)');
+                                                            $('#background img').css('opacity', '100');
+                                                            $('#background img').css('top', '0');
+                                                            $('#rotation1 img').css('opacity', '0');
+                                                            $('#rotation2 img').css('opacity', '0');
+                                                            $('#rotation3 img').css('opacity', '0');
+                                                            $('#rotation4 img').css('opacity', '0');
+                                                            $('#rotation5 img').css('opacity', '0');
+                                                            $('#rotation6 img').css('opacity', '0');
+                                                            $('#rotation7 img').css('opacity', '0');
+                                                            $('#rotation9 img').css('opacity', '0');
+                                                            $('#rotation10 img').css('opacity', '0');
+
+                                                  }
+                                        });
+                              }
+
+                    </script>
+          </header>
+          <section id="openpot">
+                    <div class="box">
+                              <div id="rotation9"><img src="./rotate8_bottom.png" data-parallax='{"y":300, "from-scroll":300,"distance":0}' data-velocity="100"></div>
+                              <div id="rotation10"><img src="./rotate8_top.png" data-parallax='{"y":-50, "from-scroll":300,"distance":0}' data-velocity="100"></div>
+                              <div id="rotation7"><img src="./rotate7.png"></div>
+                              <div id="rotation6"><img src="./rotate6.png"></div>
+                              <div id="rotation5"><img src="./rotate5.png"></div>
+                              <div id="rotation4"><img src="./rotate4.png"></div>
+                              <div id="rotation3"><img src="./rotate3.png"></div>
+                              <div id="rotation2"><img src="./rotate2.png"></div>
+                              <div id="rotation1"><img src="./rotate1.png"></div>
+
+                              <div class="title" data-parallax='{"y":-1000, "from-scroll":100,"distance":0, "smoothness":10}'>
+                                        <img src="./title.png">
+                                        <p>르꾸르제 시그니쳐 무쇠주물 원형 냄비</p>
+                              </div>
+
+                              <div id="content_pot">
+                                        <div id="content1" data-parallax='{"y":-1200,"from-scroll":300,"distance":0}'>
+                                                  <h1>뛰어난 열전도성과 보온성</h1>
+                                                  <p>돔 이펙트(Dome Effect)로<br>냄비 전체에 열이 고르게 전달됩니다.</p>
+                                        </div>
+                                        <div id="content2" data-parallax='{"y":-1200,"from-scroll":300,"distance":0}'>
+                                                  <h1>프랑스 장인의<br>90년 전통의 무쇠주물</h1>
+                                                  <p>Made in French<br>당신의 주방을 더욱 가치있게 만듭니다.</p>
+                                        </div>
+                                        <div id="content3" data-parallax='{"y":-1200,"from-scroll":300,"distance":10}'>
+                                                  <h1>불침투성 에나멜코팅</h1>
+                                                  <p>어떤 요리든 흔적이 남지 않는<br>완벽한 코팅으로 위생적입니다. </p>
+                                        </div>
+                              </div>
+                              <div id="pot_color">
+                                        <div id="color1"><img src="./color1.png"></div>
+                                        <div id="pot"><img src="./pot_color.png" data-parallax='{"y":-990, "from-scroll":600,"distance":10,"smoothness":10}'></div>
+                              </div>
+                    </div>
+          </section>
+
+          <section id="stoneware">
+                    <div class="box">
+                              <div id="stoneware_background"><img src="./stoneware.png"></div>
+                              <div id="stone_title">
+                                        <h1>스톤웨어 그릇 세트</h1>
+                              </div>
+                              <div id="content_stoneware">
+                                        <div id="content4" data-parallax='{"y":-1000,"from-scroll":1000,"distance":0}'>
+                                                  <h1>HANDMADE</h1>
+                                                  <p>성형, 컬러링, 코팅 등 모든 제조공정이<br>장인의 손을 거쳐 완성됩니다.</p>
+                                        </div>
+                                        <div id="content5" data-parallax='{"y":-1000,"from-scroll":1100,"distance":70}'>
+                                                  <h1>탁월한 내구성과 내열성</h1>
+                                                  <p>뛰어난 내구성과 열보유력으로<br>오랫동안 따뜻하게 식사를 즐길 수 있습니다.</p>
+                                        </div>
+                                        <div id="content6" data-parallax='{"y":-1000,"from-scroll":1200,"distance":140}'>
+                                                  <h1>다채로운 색감</h1>
+                                                  <p>파스텔톤부터 원색까지 다양한 컬러로<br>당신의 식탁을 화사하게 밝혀줍니다.</p>
+                                        </div>
+                              </div>
+                              <div id="weddingset">
+                                        <div id=front_layer><img src="i./front_layer.png" data-parallax='{"y":-500,"from-scroll":2300,"distance":0,"smoothness":30}'></div>
+                                        <div id=dishes><img src="./dishes.png" data-parallax='{"x":-100,"from-scroll":2500,"distance":0, "smoothness":10}'></div>
+                                        <div id=cup><img src="./cup_dishes.png" data-parallax='{"x":200,"from-scroll":2500,"distance":0,"smoothness":10}'></div>
+                                        <div id="wedding_title"><img src="./weddingset.png" data-parallax='{"y":-500,"from-scroll":2100,"distance:0"}'>
+                                                  <div id="wedding_text">
+                                                            <h1>오리엔탈 웨딩 세트</h1>
+                                                            <p>한상 차림에 알맞는 스톤웨어들로 구성되어있는 웨딩세트입니다.<br>르꾸르제 스톤웨어는 열을 잘 보존하여 오랫동안 따뜻한 식사를 즐길 수 있습니다.<br>알록달록 다양한 색감으로 당신의 식탁을 아름답게 완성해보세요.</p>
+                                                  </div>
+                                        </div>
+                                        <div id="dish_color"><img src="./dishes_color.png" data-parallax='{"y":-1840, "from-scroll":2800,"distance":0,"smoothness":10}'></div>
+
+                              </div>
+                    </div>
+          </section>
+
+          <section id="coffee_tea">
+                    <div class="box">
+                              <div id="coffee_background"><img src="./coffee.png"></div>
+                              <div id="coffee_title">
+                                        <h1>티포트와 머그 세트</h1>
+                              </div>
+                              <div id="content_coffee">
+                                        <div id="content7" data-parallax='{"y":-1000,"from-scroll":3100,"distance":0}'>
+                                                  <h1>HANDMADE</h1>
+                                                  <p>성형, 컬러링, 코팅 등 모든 제조공정이<br>장인의 손을 거쳐 완성됩니다.</p>
+                                        </div>
+                                        <div id="content8" data-parallax='{"y":-1000,"from-scroll":3500,"distance":30}'>
+                                                  <h1>다채로운 색감</h1>
+                                                  <p>파스텔톤부터 원색까지 다양한 컬러로<br>당신의 티타임을 아름답고 빛나게 밝혀줍니다.</p>
+                                        </div>
+                              </div>
+                              <div id="teaset">
+                                        <div id="back_layer"><img src="./teaset.png"></div>
+                                        <div id=tea_dishes><img src="./tea_dishes.png" data-parallax='{"x":100,"from-scroll":5000,"distance":0,"smoothness":30}'></div>
+                                        <div id=bluetea><img src="./bluetea.png" data-parallax='{"x":-100,"from-scroll":4500,"smoothness":30}'></div>
+                                        <div id="tea_title"><img src="./originalteaset.png">
+                                                  <div id="teaset_text">
+                                                            <h1>티 세트</h1>
+                                                            <p>르꾸르제 티세트로 여유있고 우아한 티타임을 완성해보세요.<br>티포트, 거름망,잔과 받침으로 구성된 티타임을 위한 완벽한 세트입니다.<br>한잔의 여유도 기품있고, 우아하게 즐기세요.</p>
+                                                  </div>
+                                        </div>
+                                        <div id="tea_color"><img src="./tea_color.png" data-parallax='{"y":-320,"from-scroll":5500,"distance":10,"smoothness":10}'></div>
+                              </div>
+                    </div>
+          </section>
+
+
+</body>
+
+</html>
